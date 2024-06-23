@@ -13,8 +13,7 @@ const Book: React.FC = () => {
   const [borrowDate, setBorrowDate] = useState('');
   const [returnDate, setReturnDate] = useState('');
   const [editingBookId, setEditingBookId] = useState<number | null>(null);
-  const [filterStatus, setFilterStatus] = useState<string>(''); // Thêm state cho trạng thái lọc
-
+  const [filterStatus, setFilterStatus] = useState<string>(''); 
   const handleAddOrUpdateBook = () => {
     if (editingBookId === null) {
       dispatch(addBook({ title: bookTitle, student: studentName, borrowDate, returnDate, status: false }));
@@ -52,7 +51,6 @@ const Book: React.FC = () => {
     setFilterStatus(e.target.value);
   };
 
-  // Lọc danh sách sách dựa trên trạng thái đã chọn
   const filteredBooks = filterStatus === ''
     ? books
     : books.filter(book => (filterStatus === 'returned' && book.status) || (filterStatus === 'not-returned' && !book.status));
