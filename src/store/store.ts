@@ -1,8 +1,10 @@
-// tạo kho chứa tất cả 
-import { createStore, combineReducers } from "redux"
-import jobReducer from "./reducers/jobReducer"
+import { createStore, combineReducers } from "redux";
+import bookReducer from "./reducers/bookReducer";
 
-const rootReducecr=combineReducers({
-    jobReducer,
-})
-export const store=createStore(rootReducecr);
+const rootReducer = combineReducers({
+  bookReducer,
+});
+
+export const store = createStore(rootReducer);
+
+export type RootState = ReturnType<typeof rootReducer>;

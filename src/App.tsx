@@ -1,10 +1,10 @@
 import React from 'react'
-import Job from './components/Job'
+import Book from './components/Book'
 
 export default function App() {
   return (
     <div>
-      <Job></Job>
+      <Book></Book>
     </div>
   )
 }
