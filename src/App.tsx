@@ -1,11 +1,12 @@
 import React from 'react'
-import Job from './components/Job'
+import Book from './components/Book'
 
 export default function App() {
   console.log(1);
   return (
+    app
     <div>
-      <Job></Job>
+      <Book></Book>
     </div>
   )
 }
